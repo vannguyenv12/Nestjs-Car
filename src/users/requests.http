@@ -1,0 +1,40 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+
+### Signin a new user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+
+### Who am i
+GET http://localhost:3000/auth/whoami
+
+### Sign Out User
+POST http://localhost:3000/auth/signout
+
+### Find a single user
+GET http://localhost:3000/auth/2
+
+### Find users by email
+GET http://localhost:3000/auth?email=asd@sad.sad
+
+### Delete user by id
+DELETE  http://localhost:3000/auth/12323
+
+### Update user by id
+PATCH   http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email": "aaa@aaa.aaa",
+}
